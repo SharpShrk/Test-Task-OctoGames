@@ -144,3 +144,51 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+  - Id: Characters/851dffdf-71ff-4029-9e0f-1912c70167ae
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Player
+      guid: 42dd19d1bdc1c8141979d28890129965
+  - Id: Characters/74c4ae79-afed-410f-9f2a-6d0e865965fd
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Npc1
+      guid: fa0ab98a342fc494ba3b0c2e5d2b8970
+    - name: Happy
+      pathPrefix: Characters/Npc1
+      guid: e93a435f02506dc4c85232ad316c28e1
+    - name: Angry
+      pathPrefix: Characters/Npc1
+      guid: 51a63178ef319724fba807bb31edce39
+  - Id: Scripts
+    Resources:
+    - name: Start
+      pathPrefix: Scripts
+      guid: 5700f4eaea363cf42b7a72a465916d1e
+  - Id: Characters/58872bdb-c97a-487a-93e0-51fb39124cf0
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Npc2
+      guid: 0cf25af4466271a42a239952258998bb
+    - name: Happy
+      pathPrefix: Characters/Npc2
+      guid: 35e728a09537d6c4ab72e18908d4fc13
+    - name: Angry
+      pathPrefix: Characters/Npc2
+      guid: 590122bacd06be24bac11f5cfc479853
+  - Id: CharacterAvatars
+    Resources:
+    - name: Player/Default
+      pathPrefix: CharacterAvatars
+      guid: 1eab85a5c8c5cad448502c8b78f793e4
+    - name: Npc1/Default
+      pathPrefix: CharacterAvatars
+      guid: b0bdecd3ade7c0e4486046aaeedeb7a8
+    - name: Npc2/Default
+      pathPrefix: CharacterAvatars
+      guid: 9742fcb899ed7f74893a1c951b170ea3
+  - Id: Backgrounds/f97a4588-3b20-4cd7-9e81-2fb2fe71c549
+    Resources:
+    - name: Classroom
+      pathPrefix: Backgrounds/MainBackground
+      guid: 0827814165c4df0479f522e79d57fda4
