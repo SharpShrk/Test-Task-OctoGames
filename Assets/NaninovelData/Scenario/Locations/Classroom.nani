@@ -1,0 +1,4 @@
+@back Classroom
+
+@goto MeetingNPC1 if:!isMeetingNPC1
+@stop

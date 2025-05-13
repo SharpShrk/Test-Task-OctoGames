@@ -1,0 +1,4 @@
+@back Hallway
+
+@goto MeetingNPC2 if:!isMeetingNPC2
+@stop

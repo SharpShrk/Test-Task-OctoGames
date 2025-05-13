@@ -1,0 +1,11 @@
+@back School
+@input PlayerName summary:"Введите ваше имя:"
+@stop
+
+;Стартовая инициализация переменных
+@set Player.DisplayName=PlayerName
+@set isItemFound=false
+@set isMeetingNPC1=false
+@set isMeetingNPC2=false
+
+@goto Classroom
