@@ -8,4 +8,5 @@
 @set isMeetingNPC1=false
 @set isMeetingNPC2=false
 
+
 @goto Classroom

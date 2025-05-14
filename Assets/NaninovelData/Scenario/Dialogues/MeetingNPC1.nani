@@ -22,5 +22,7 @@ Player: Понял. Будь тут, я скоро вернусь.
 
 Player: Я забыл спросить где тут библиотека... Ладно, спрошу у кого нибудь по пути
 
-@goto Hallway
+;@hidePrinter
+@goto MiniGame
+;@goto Hallway
 @stop
