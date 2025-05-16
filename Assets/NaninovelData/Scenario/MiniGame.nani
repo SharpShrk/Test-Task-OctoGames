@@ -1,2 +1,8 @@
 @playMiniGame
+
+@if G_MiniGameResult=="true"
+    @toast "Вы победили!" appearance:info time:2
+@else
+    @toast "Вы проиграли!" appearance:info time:2
+
 @stop

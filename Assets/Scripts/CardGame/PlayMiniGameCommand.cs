@@ -1,5 +1,4 @@
 using Naninovel;
-using Naninovel.Commands;
 
 [CommandAlias("playMiniGame")]
 public class PlayMiniGameCommand : Command
@@ -9,13 +8,7 @@ public class PlayMiniGameCommand : Command
         var miniGameService = Engine.GetService<MiniGameService>();
         bool result = await miniGameService.PlayMiniGameAsync();
 
-        if (result)
-        {
-            // Логика при успешном завершении мини-игры
-        }
-        else
-        {
-            // Логика при неудачном завершении мини-игры
-        }
+        var variableManager = Engine.GetService<ICustomVariableManager>();
+        variableManager.TrySetVariableValue("MiniGameResult", result);
     }
 }

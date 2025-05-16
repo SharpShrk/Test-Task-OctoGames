@@ -1,0 +1,12 @@
+@showUI QuestUI
+
+@char Player.Idle avatar:Player look:left pos:30,-10 scale:2
+@char Npc1 avatar:Npc1 look:left pos:80,-10 scale:2
+
+Npc1: Ты уже нашел конспект?
+Player: А? Нет... Еще нет...
+
+@hide Npc1
+@hidePrinter
+@showUI NavigationUI
+@stop

@@ -156,7 +156,7 @@ MonoBehaviour:
       DisplayName: Yumi
       UseCharacterColor: 1
       NameColor: {r: 1, g: 0.3915094, b: 0.55949694, a: 1}
-      MessageColor: {r: 0.8584906, g: 0.28751338, b: 0.45162654, a: 1}
+      MessageColor: {r: 1, g: 1, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
       SpeakingPose: 
@@ -227,8 +227,8 @@ MonoBehaviour:
       BakedLookDirection: 1
       DisplayName: Nina
       UseCharacterColor: 1
-      NameColor: {r: 0.71204466, g: 0.24154504, b: 0.8679245, a: 1}
-      MessageColor: {r: 0.5520321, g: 0.036445368, b: 0.5943396, a: 1}
+      NameColor: {r: 0.44963202, g: 0.06243326, b: 0.5754717, a: 1}
+      MessageColor: {r: 1, g: 1, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
       SpeakingPose: 
@@ -243,8 +243,8 @@ MonoBehaviour:
       Poses:
       - name: Idle
         actorState:
-          appearance: 
-          visible: 0
+          appearance: Idle
+          visible: 1
           position: {x: 0, y: 0, z: 0}
           rotation: {x: 0, y: 0, z: 0, w: 0}
           scale: {x: 0, y: 0, z: 0}

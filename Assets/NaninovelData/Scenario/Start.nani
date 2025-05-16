@@ -1,4 +1,5 @@
 @back School
+@bgm BackgroundMusic
 @input PlayerName summary:"Введите ваше имя:"
 @stop
 
@@ -7,6 +8,11 @@
 @set isItemFound=false
 @set isMeetingNPC1=false
 @set isMeetingNPC2=false
+@set finalSceneComplete=false
 
+@switchButtonLocation locationName:Library isActive:false
+@switchButtonLocation locationName:Hallway isActive:true
+@switchButtonLocation locationName:Classroom isActive:true
 
+@clearQuest
 @goto Classroom

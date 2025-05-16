@@ -1,7 +1,7 @@
-@back Hallway
 @showUI QuestUI
+@set isMeetingNPC2=true
 @char Player.Idle look:left avatar:Player pos:15,-10 scale:2
-@char Npc2 look:left avatar:Npc2 pos:70,-40 scale:1.2
+@char Npc2.Idle look:left avatar:Npc2 pos:70,-40 scale:1.2
 
 Player: Привет… Не подскажешь, где тут библиотека?
 Npc2: О, новый, да? \[оценивающе смотрит\]. Раньше я тут тебя не видела...
@@ -16,12 +16,13 @@ Npc2: Очень серьёзно. Правила простые. Победиш
 Npc2: Считай это проверкой.
 Player: Ладно... поехали.
 
-; Переход на мини-игру затем один из двух диалогов в зависимости от результата
+@playMiniGame
 
-; в случае победы этот диалог:
-Npc2: ...Ну ни фига себе. Не часто кто-то переигрывает меня.
-; в случае поражения этот диалог:
-Npc2: Ха! Ещё один в коллекцию побеждённых. Не обижайся, ты держался неплохо.
+@if MiniGameResult=="true"
+    Npc2: ...Ну ни фига себе. Не часто кто-то переигрывает меня.
+@else
+    Npc2: Ха! Ещё один в коллекцию побеждённых. Не обижайся, ты держался неплохо.
+@endif
 
 Npc2: Ладно, как и обещала — библиотека на втором этаже, в конце восточного крыла. Не заблудишься.
 Player: Спасибо {GetName("Npc2")}. Надеюсь конспект будет там.
@@ -30,7 +31,12 @@ Npc2: Я бы с радостью... <i>отблагодарила</i> тебя.
 Npc2: Подумай об этом, ладно?
 Player: ...Я подумаю.
 
+@switchButtonLocation locationName:Library isActive:true
+@hidePrinter 
+@hide Npc2
+
 @toast "Вы получили новое задание!" appearance:info time:2
 @addSubtask questId:0 subId:1 subText:"Отдать тетрадь {GetName("Npc2")}"
 
+@showUI NavigationUI
 @stop

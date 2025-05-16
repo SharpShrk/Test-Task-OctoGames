@@ -10,7 +10,7 @@ public class QuestManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void CreateQuest(int id, string title)
@@ -59,5 +59,15 @@ public class QuestManager : MonoBehaviour
             subTask.Complеte();
         else
             Debug.LogWarning("Подзадача не найдена");
+    }
+
+    public void ResetQuests()
+    {
+        foreach (Transform child in _questContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        _questUIList.Clear();
     }
 }
