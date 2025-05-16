@@ -144,3 +144,113 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+    - name: QuestUI
+      pathPrefix: UI
+      guid: 013c3343da34dd144b729a21fd9b9ac8
+    - name: CardGameUI
+      pathPrefix: UI
+      guid: 2c4d172769e92b44492c5202720d60a7
+    - name: LocationsUI
+      pathPrefix: UI
+      guid: e6467e700103ee448b49f35d91ba5e73
+    - name: GlobalMapUI
+      pathPrefix: UI
+      guid: 56683242ba505254fab68ea4e54e3fd2
+    - name: NavigationUI
+      pathPrefix: UI
+      guid: 35aa129f3262d9848a2ac8fda6e12241
+  - Id: Characters/851dffdf-71ff-4029-9e0f-1912c70167ae
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Player
+      guid: eabb28f139e70fc49bbb50d5185cd137
+  - Id: Characters/74c4ae79-afed-410f-9f2a-6d0e865965fd
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Npc1
+      guid: 81ac19a13edf6d94c93328441dbb890a
+    - name: Happy
+      pathPrefix: Characters/Npc1
+      guid: eb3422150f7bfc142b16748d83d0e7ae
+    - name: Angry
+      pathPrefix: Characters/Npc1
+      guid: c7476592543fa3040992492415e2f6c1
+  - Id: Scripts
+    Resources:
+    - name: Start
+      pathPrefix: Scripts
+      guid: 5700f4eaea363cf42b7a72a465916d1e
+    - name: MeetingNPC1
+      pathPrefix: Scripts
+      guid: dd78a787aa8bed34c8297f1823b6f286
+    - name: Classroom
+      pathPrefix: Scripts
+      guid: cbe275503dbe6fb4c84e42b46f33299f
+    - name: Hallway
+      pathPrefix: Scripts
+      guid: 7a4399d879c00834fa52f83e0a0f3c3c
+    - name: Library
+      pathPrefix: Scripts
+      guid: fe5685e353294cb4b9cff476f88b2bd0
+    - name: MeetingNPC2
+      pathPrefix: Scripts
+      guid: 7b5d5f1149a86fc4a9f445940db565c0
+    - name: MiniGame
+      pathPrefix: Scripts
+      guid: 63b0d6454fd06f849b6fc3f49a9ebff6
+    - name: RemeetingNPC1
+      pathPrefix: Scripts
+      guid: 54407303691bf9e4ebd99097c213f075
+    - name: RemeetingNPC2
+      pathPrefix: Scripts
+      guid: 4967d99f1c2da794dbb16b3e8ada9dd6
+    - name: FinalScene
+      pathPrefix: Scripts
+      guid: f3e7ae5d2aba267428b62279539cbb76
+    - name: EmptyHallway
+      pathPrefix: Scripts
+      guid: b09164f4ba3c45646826b26720c0e493
+    - name: EmptyClassroom
+      pathPrefix: Scripts
+      guid: 645c8d84d21ce8a4a8f62a64524a513f
+  - Id: Characters/58872bdb-c97a-487a-93e0-51fb39124cf0
+    Resources:
+    - name: Idle
+      pathPrefix: Characters/Npc2
+      guid: 9742fcb899ed7f74893a1c951b170ea3
+    - name: Happy
+      pathPrefix: Characters/Npc2
+      guid: 5009e80fd9188ed42b69bd5bfe3ed5f2
+    - name: Angry
+      pathPrefix: Characters/Npc2
+      guid: 72f43952f2bb9ec449e84f3ac524ccdd
+  - Id: CharacterAvatars
+    Resources:
+    - name: Player/Default
+      pathPrefix: CharacterAvatars
+      guid: 1eab85a5c8c5cad448502c8b78f793e4
+    - name: Npc1/Default
+      pathPrefix: CharacterAvatars
+      guid: b0bdecd3ade7c0e4486046aaeedeb7a8
+    - name: Npc2/Default
+      pathPrefix: CharacterAvatars
+      guid: de53fa44776dcdc4dabc1a1d0045832e
+  - Id: Backgrounds/f97a4588-3b20-4cd7-9e81-2fb2fe71c549
+    Resources:
+    - name: Classroom
+      pathPrefix: Backgrounds/MainBackground
+      guid: 0827814165c4df0479f522e79d57fda4
+    - name: Hallway
+      pathPrefix: Backgrounds/MainBackground
+      guid: dfddfaa52fc335148a42ebce02fbb300
+    - name: School
+      pathPrefix: Backgrounds/MainBackground
+      guid: 356a3f6f94b22b4438ff3e204d1ef2ea
+    - name: Library
+      pathPrefix: Backgrounds/MainBackground
+      guid: efba6f7449fb34047b02d2fb89fb6580
+  - Id: Audio
+    Resources:
+    - name: BackgroundMusic
+      pathPrefix: Audio
+      guid: 231f94ad10a38dc4a98d1470b9be66c0

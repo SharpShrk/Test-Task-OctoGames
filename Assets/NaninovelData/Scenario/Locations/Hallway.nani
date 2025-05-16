@@ -1,0 +1,8 @@
+@back Hallway
+@hideUI NavigationUI
+
+@goto MeetingNPC2 if:!isMeetingNPC2
+@goto RemeetingNPC2 if:!isItemFound
+@goto EmptyHallway if:isItemFound=true
+
+@stop

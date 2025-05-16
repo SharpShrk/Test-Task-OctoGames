@@ -1,0 +1,16 @@
+@showUI QuestUI
+@switchButtonLocation locationName:Classroom isActive:true
+
+@char Player.Idle look:left avatar:Player pos:15,-10 scale:2
+@char Npc2.Idle look:left avatar:Npc2 pos:70,-40 scale:1.2
+
+Npc2: Что? Опять заблудился? Я же сказала - библиотека на втором этаже, в конце восточного крыла!
+Player: Да, я как раз туда иду...
+Npc2: Не забудь про наш уговор!
+Player: Я помню, помню...
+
+@hide Npc2
+@hidePrinter
+@showUI NavigationUI
+
+@stop

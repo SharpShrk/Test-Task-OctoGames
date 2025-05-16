@@ -1,0 +1,13 @@
+@showUI QuestUI
+@switchButtonLocation locationName:Library isActive:false
+@switchButtonLocation locationName:Hallway isActive:false
+@switchButtonLocation locationName:Classroom isActive:true
+
+@char Player.Idle look:left avatar:Player pos:15,-10 scale:2
+
+Player: Странно, куда делась {GetName("Npc2")}? Еще 5 минут назад была тут...
+Player: Возможно она уже в классе... Надо поторопиться, {GetName("Npc1")} похоже уже заждалась...
+
+@hidePrinter
+@showUI NavigationUI
+@stop

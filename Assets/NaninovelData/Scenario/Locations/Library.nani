@@ -1,0 +1,26 @@
+@back Library
+@hideUI NavigationUI
+@showUI QuestUI
+@switchButtonLocation locationName:Classroom isActive:false
+@switchButtonLocation locationName:Library isActive:false
+@char Player.Idle avatar:Player look:left pos:30,-10 scale:2
+
+Player: Где то тут должен быть конспект, толстая черная тетрадь...
+Player: А! Вот же она! И как только {GetName("Npc1")} умудрилась забыть ее тут. Она же прям в глаза бросается.
+
+@toast "Конспект найден. Задание выполнено!" appearance:info time:2
+@completeSubtask questId:0 subId:0 
+@set isItemFound=true
+
+Player: Так... Посмотрим...
+Player: Оу... Тут же прям все темы подробно разобраны... Это весьма ценная тетрадка...
+Player: Теперь понятно почему {GetName("Npc2")} на всё готова лишь бы заполучить ее.
+Player: Надо подумать что с ней делать, а может вообще оставить ее себе?
+Player: Ладно, решу по пути в класс...
+@hidePrinter
+
+@toast "Вы получили новое задание!" appearance:info time:2
+@addSubtask questId:0 subId:2 subText:"Оставить конспект себе"
+@showUI NavigationUI
+
+@stop

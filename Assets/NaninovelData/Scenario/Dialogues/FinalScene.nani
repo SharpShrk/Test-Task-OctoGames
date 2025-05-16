@@ -1,0 +1,72 @@
+@switchButtonLocation locationName:Library isActive:false
+@switchButtonLocation locationName:Hallway isActive:false
+@switchButtonLocation locationName:Classroom isActive:false
+
+;@back Classroom
+@showUI QuestUI
+
+@char Player.Idle look:left avatar:Player pos:10,-10 scale:2
+@char Npc1 look:left avatar:Npc1 pos:70,-10 scale:2
+@char Npc2.Idle look:left avatar:Npc2 pos:80,-50 scale:1.2
+
+Player: А вот ты где… Я так и знал, что найду тебя здесь, {GetName("Npc2")}.
+Npc2: Ага. Меня-то найти проще, чем библиотеку...
+Npc1: {PlayerName}! Ты нашёл конспекты? Я весь день переживаю...
+Npc1: Если они потерялись — я… я просто не выдержу…
+Player: Да, я нашёл тетрадь.
+Npc2: <i>(Наклоняется вперёд, с игривой улыбкой)</i> Хэй, у нас же был уговор. Помнишь?
+Npc1: Уговор?.. Какой ещё уговор?!
+Player: Ничего важного. Просто... ерунда. Не бери в голову.
+Npc1: {PlayerName}, пожалуйста, отдай мне тетрадь. Мне она очень нужна.
+Npc2: <i>(Подмигивает)</i>
+Player: <i>(Думает что делать с тетрадью...)</i>
+
+@choice "Отдать тетрадь {GetName("Npc1")}" goto:.GivenNoteNPC1
+@choice "Отдать тетрадь {GetName("Npc2")}" goto:.GivenNoteNPC2
+@choice "Оставить тетрадь себе" goto:.GivenNotePlayer
+@stop
+
+# GivenNoteNPC1
+Player: Держи, {GetName("Npc1")}. Это твоё.
+@toast "Задание выполнено!" appearance:info time:2
+@completeSubtask questId:0 subId:1
+@char Npc1.Happy
+@char Npc2.Angry
+Npc2.Angry: <i>(Хмурится)...</i> Серьёзно? Вот так вот... просто взял — и отдал? Значит, уговор был так... для галочки? Подойдешь еще ко мне - нарвешься на грубость!
+@hide Npc2
+Npc1.Happy: О, спасибо {PlayerName}! Я так рада, ты не представляешь! Сейчас мне надо бежать, а вечером можем встретиться...
+@hide Npc1
+@goto .AfterChoice
+
+# GivenNoteNPC2
+Player: {GetName("Npc2")}, мне кажется тебе она пригодится больше, чем остальным, надеюсь она поможет тебе.
+@toast "Задание выполнено!" appearance:info time:2
+@completeSubtask questId:0 subId:2
+@char Npc1.Angry
+@char Npc2.Happy
+Npc1.Angry: <i>(Шокирована...)</i> Что?.. Но... ты же... Как ты мог? Она же моя! Не подходи ко мне больше!
+@hide Npc1
+Npc2.Happy: Вот это я понимаю! Умеешь принимать правильные решения. Обещаю — не пожалеешь. Давай встретимся попозже...
+@hide Npc2
+@goto .AfterChoice
+
+# GivenNotePlayer
+Player: Пожалуй я оставлю ее себе... Без обид.
+@toast "Задание выполнено!" appearance:info time:2
+@completeSubtask questId:0 subId:3
+@char Npc1.Angry
+@char Npc2.Angry
+Npc1.Angry: Что?! Это вообще-то моя тетрадь! Ты не имеешь права! Не подходи ко мне больше!
+@hide Npc1
+Npc2.Angry: Эй! А как же уговор? Думаю дальше нам не о чем с тобой говорить, чао!
+@hide Npc2
+@goto .AfterChoice
+
+# AfterChoice
+Player: Пожалуй и я пойду...
+@resetText
+@completeQuest questId:0
+
+@showUI NavigationUI
+@hideUI QuestUI
+@stop

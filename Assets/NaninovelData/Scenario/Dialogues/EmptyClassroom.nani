@@ -1,0 +1,8 @@
+@char Player.Idle avatar:Player look:left pos:30,-10 scale:2
+
+Player: Пу-пу-пу, кажется тут никого нет...
+
+@hidePrinter
+@showUI NavigationUI
+
+@stop

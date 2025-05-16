@@ -1,0 +1,9 @@
+@back Classroom
+@hideUI NavigationUI
+
+@goto EmptyClassroom if:finalSceneComplete=true reset:IBackgroundManager
+@goto MeetingNPC1 if:!isMeetingNPC1
+@goto RemeetingNPC1 if:!isItemFound
+@goto FinalScene if:isItemFound=true
+
+@stop
